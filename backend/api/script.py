@@ -124,6 +124,5 @@ def run_steps(csv_file_path):
     compute_total_per_cutoff(unique_eids,all_items)
     return generate_dict(computed_values)
    
-# csv_file_path = 'time-report-42.csv'
 if __name__ == '__main__':
     run_steps(csv_file_path)

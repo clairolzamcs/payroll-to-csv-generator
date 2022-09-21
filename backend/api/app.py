@@ -4,7 +4,7 @@
 
 import os
 import shutil
-from flask import json, jsonify, Flask, Response, render_template, request, url_for, redirect # render_template is only used to render an HTML template
+from flask import json, jsonify, Flask, Response, request
 from flask_pymongo import PyMongo
 from script import run_steps as process_data
 from csvConverter import convert as convert_to_dict
@@ -89,12 +89,9 @@ def insert_one(eid):
         records.append(document)
 
     return jsonify(records), 200
-    # return jsonify(message="success"), 200 
 
 @app.route("/add_many")
 def add_many(csv_file_path):
-# def add_many():
-#     csv_file_path = ('time-report-42.csv')
     starting_id = 1
 
     # check if collection exists

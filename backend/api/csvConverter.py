@@ -19,7 +19,6 @@ def convert(csv_file_path,starting_id):
             starting_id = starting_id + 1
 
     return contents
- 
-# csv_file_path = 'time-report-42.csv'
+
 if __name__ == '__main__':
     print(convert(csv_file_path))
